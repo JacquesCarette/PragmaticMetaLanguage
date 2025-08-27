@@ -1,0 +1,35 @@
+## August 26, 2025, Spencer's notes
+
+Conventions are an example of pragmatics.
+
+We discussed examples of various conventions, like naming conventions, such as lower case letters from the beginning of the alphabet for parameters and lower case letters late in the alphabet for variables (like a*x^2 + b*x + c, rather than x*a^2 + y*a+z).  Other examples of conventions are f, g and h for function names, bold face for vectors, delta for change, etc.
+
+JC said there are many other examples of pragmatics that we would have discussed in previous meetings.  I looked through my notes from previous meetings and the only other example I found was units.  I assume units are considered pragmatic because they aren’t necessary to form an expression.  They are extra information that we add to help us know the expression is meaningful.
+
+JC proposed that maybe the semantics of the metalanguage can be given “implicitly” by its successful rendering into target languages, rather than specifying an inherent semantics.  WF pushed back that since we are only mapping to a core part of the language, rather than the entire language, specifying the semantics should be possible.  We then discussed how the semantics is feasible for mathematical expressions, and I believe feasible for (the relevant subset of) a programming languages, but natural language is where things get tricky.
+
+For natural language artifacts we have the challenge of the structural choices for the document.  (Maybe this isn’t that challenging, since pandoc seems to have codified these options?) What goes in which section/subsection/paragraph etc. What is the order of the parts?  Table of contents at the end of the document is a choice that authors can make.  We also know more than the information in the table of contents.  We know the kind of information that goes in an introduction, in the conclusions, etc.  For instance, a common part of writing is a “roadmap” of the sections and subsections ahead.  This kind of roadmap should be something that we can generate.  We also have rendering choices, like hyperlinks within one big document, or hyperlinks to separate files, or a pdf file, or ...
+
+
+## July 22, 2025, Jacques's notes
+
+We need to remember that the 'original problem' that started these discussions might be phrased as follows:
+
+Given a family of purposes (like programs, specifications, other narratives, tests, and so on), and for each of those a family of languages (so for programs, we could have Java and Python), we would like a meta-language in which we can 'say' everything we need so that we can view projecting out the data necessary for a purpose, in a particular language as just that, projection (or extraction).
+
+Thus the needed information, modulo choices (such as notation) should already be present in the source. [This is why we don't want to reconstruct that a model is an ODE, rather the model should tell us that it's an ODE. The direction of information flow is important.]
+
+We know that 'encoding' some of the needed information can be done with a theory network. We don't know how to *use* a theory network to "get the job done", i.e. how to meaningfully extract the information. Other information, such as that needed for specifications, narrative and tests, is not as obviously encodable in that way. That's another challenge.
+
+
+## July 22, 2025, Spencer's notes
+
+Question: Can we use Bill’s Little Theories in Drasil?
+ 
+Answer: Yes, and No.  The little theories work well for the mathematical knowledge, but would not currently capture other information, like rationale, intent units, and documentation.  Jacques also mentioned that relevant information about the kind of a quantity is buried.  For instance, we want it to be obvious that a quantity is defined by an ODE.  We want this information “up front”.
+
+We discussed the example of the different notation conventions for vectors, like bold face, arrow over vector symbol, underline of vector symbol, index notation.
+
+We referred to the extra information that is necessary, but not typically captured by syntax and semantics, as pragmatics.  We discussed the example of units.
+
+We concluded with the idea that we should build a list of the pragmatic information that people haven’t thought through.
