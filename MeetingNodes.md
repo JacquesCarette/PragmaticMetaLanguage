@@ -37,3 +37,26 @@ We concluded with the idea that we should build a list of the pragmatic informat
 ## September 25, 2025, Summary of Meeting
 
 As a step toward creating a pragmatic metalanguage, JC proposed first working on several example over languages, where an over language abstracts the syntax of several target (or under) languages so that programs written in the over language can generate code in each of their associated under languages. Once we have enough examples of over languages, we will likely need "over over" languages. When we under stand things well enough, we can target a different kind of over language, which JC termed a multi-concern language.
+
+Example of over languages include:
+
+- GOOL
+- pandoc
+- the work in Drasil abstracting html and LaTeX (doclang?)
+- typescript is an over language of Javascript
+- LLVM (Low Level Virtual Machine) is an over language for assembly. LLVM serves as a common Intermediate Representation (IR). Frontends (like Clang) translate source code into LLVM IR. Backends then optimize the IR and generate machine code for different architectures (x86, ARM, RISC-V, etc.).
+
+JC observed that racket could be seen as a metalanguage for creating over languages.
+
+Over languages focuses on syntax, but semantics sneaks in.  WF gave the example of universal quantification, which requires three elements: quantifier, variable, body. You need to be able to recognize the variable in the body.
+
+WF mentioned that an over language could be used on top of a target language where one does not like the syntax of the target language.
+
+An over language does not need all of the features of the under languages.
+
+Examples of different programming language targets where only one of the options is necessary:
+
+- do while versus repeat until
+- where and let 
+- single let and multilet
+
