@@ -33,3 +33,7 @@ We discussed the example of the different notation conventions for vectors, like
 We referred to the extra information that is necessary, but not typically captured by syntax and semantics, as pragmatics.  We discussed the example of units.
 
 We concluded with the idea that we should build a list of the pragmatic information that people haven’t thought through.
+
+## September 25, 2025, Summary of Meeting
+
+As a step toward creating a pragmatic metalanguage, JC proposed first working on several example over languages, where an over language abstracts the syntax of several target (or under) languages so that programs written in the over language can generate code in each of their associated under languages. Once we have enough examples of over languages, we will likely need "over over" languages. When we under stand things well enough, we can target a different kind of over language, which JC termed a multi-concern language.
