@@ -46,7 +46,7 @@ Example of over languages include:
 - typescript is an over language of Javascript
 - LLVM (Low Level Virtual Machine) is an over language for assembly. LLVM serves as a common Intermediate Representation (IR). Frontends (like Clang) translate source code into LLVM IR. Backends then optimize the IR and generate machine code for different architectures (x86, ARM, RISC-V, etc.).
 - JC's work with Reed on an over language for Agda/Lean/Idris/Rocq
-- one could envision an over language for various logics that don't have good mutual-interpretability results but yet can still 'say' some of the same things. Maybe this is Dedukti?
+- one could envision an over language for various logics that don't have good mutual-interpretability results but yet can still 'say' some of the same things. Maybe this is [Dedukti](https://github.com/JacquesCarette/PragmaticMetaLanguage.git)?
 
 JC observed that racket could be seen as a metalanguage for creating over languages.
 
