@@ -63,3 +63,12 @@ Examples of different programming language targets where only one of the options
 - single let and multilet
 
 Having such redundancy is useful for human comprehension but not for computational expressivity. But, being syntactic, this is an implicit admission that the principal stakeholders are humans rather than machines. Thus cognitive load is an important consideration.
+
+## October 2, 2025, Summary of Meeting
+
+- One of the challenges will be how to properly comment the "under" language code.  How do we attach things in the right spot in the under languages? That is, how do we put the English in the right spot and say the right thing?  For instance, the over language may have array expressions, but the under language is forced to use for loops.
+- Potential paper title: Designing Syntactic Over Languages
+    - a section that defines what an over language is
+    - the body of the paper presents the design principles that we reverse engineer from the case studies
+- Jacques gave the example of something that is not an over language. The example was generating sorting algorithms (Quick Sort) in many languages from Prolog to C. This is an example of an abstract language, not an over language.  The "distance" between the language and the generated code is greater for an abstract language than for an over language.
+- An example of an over language principle is that quantification has 3 components
