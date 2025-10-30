@@ -72,3 +72,16 @@ Having such redundancy is useful for human comprehension but not for computation
     - the body of the paper presents the design principles that we reverse engineer from the case studies
 - Jacques gave the example of something that is not an over language. The example was generating sorting algorithms (Quick Sort) in many languages from Prolog to C. This is an example of an abstract language, not an over language.  The "distance" between the language and the generated code is greater for an abstract language than for an over language.
 - An example of an over language principle is that quantification has 3 components
+
+## October 23, 2025, Summary of Meeting
+
+- the over language has to contain all the necessary language to cover all chosen under languages
+- the translator must know the syntax for all under languages
+- for example, if one of the under languages has types, the over language must also have types.  The type information would be ignored for those under languages that do not need it
+- advantages of over language
+    - we can design the syntax ourselves
+    - we get to pick where we land in the under languages - we can pick the features that we use, and ignore those we do not want
+- the mapping from the over language to the under language is not necessarily surjective, but it is necessarily injective
+- the mapping does not have to be total
+- our paper will not be on the theory of over languages but on the design of over languages.  We will need a definition of what an over language is
+- homework - Spencer to examine GOOL as an over language, Bill to examine ?, Jacques to examine ?
