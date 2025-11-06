@@ -46,7 +46,7 @@ Example of over languages include:
 - typescript is an over language of Javascript
 - LLVM (Low Level Virtual Machine) is an over language for assembly. LLVM serves as a common Intermediate Representation (IR). Frontends (like Clang) translate source code into LLVM IR. Backends then optimize the IR and generate machine code for different architectures (x86, ARM, RISC-V, etc.).
 - JC's work with Reed on an over language for Agda/Lean/Idris/Rocq
-- one could envision an over language for various logics that don't have good mutual-interpretability results but yet can still 'say' some of the same things. Maybe this is [Dedukti](https://github.com/JacquesCarette/PragmaticMetaLanguage.git)?
+- one could envision an over language for various logics that don't have good mutual-interpretability results but yet can still 'say' some of the same things. Maybe this is [Dedukti](https://deducteam.github.io/)?
 
 JC observed that racket could be seen as a metalanguage for creating over languages.
 
@@ -84,4 +84,19 @@ Having such redundancy is useful for human comprehension but not for computation
 - the mapping from the over language to the under language is not necessarily surjective, but it is necessarily injective
 - the mapping does not have to be total
 - our paper will not be on the theory of over languages but on the design of over languages.  We will need a definition of what an over language is
-- homework - Spencer to examine GOOL as an over language, Bill to examine ?, Jacques to examine ?
+- homework - Spencer to examine GOOL as an over language, Bill to examine [Dedukti](https://deducteam.github.io/), Jacques to examine [Pandoc](https://pandoc.org/)
+
+## October 30, 2025, Summary of Meeting
+
+- 
+
+## November 6, 2025, Summary of Meeting
+
+- [Dedukti](https://deducteam.github.io/) is not really an over language.  It is a logical framework.  It serves a different purpose from an over language.
+- a sentence in an over language has fundamental information + annotations.  When mapped to an under language the fundamental information should remain, but some annotations can be forgotten.
+- if a sentence, s, in an over language maps to two sentences, s1 and s2 (in languages L1 and L2, respectively), than s1 "means the same as" s2.
+- we currently have three over languages: pandoc, GOOL and panbench
+- panbench is an over language for the structure of the syntax of 4 languages: [agda](https://en.wikipedia.org/wiki/Agda_(programming_language)), [idris](https://www.idris-lang.org/), [lean](https://lean-lang.org/) and [rocq](https://rocq-prover.org/). 
+- we discussed how over languages are used.  An over language is an intermediate language.  The over language could be the target of a generator, as in the case of Drasil code generating GOOL code.  For pandoc, the normal use case is for translation.  A sentence s1 in language L1 could be translated to a sentence s in the over language, and then that sentence could be translated to a new sentence s1 in language L2.  For panbench the language is intended to be used directly to write tests.
+- [rust](https://rust-lang.org/) is a typed, low-level language with ownership types.  JC mentioned that it can be considered as a modern replacement for C.
+- WF said that it would be relatively easy to build an over language for first-order logic - a family of syntax of first order logics
