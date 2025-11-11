@@ -88,7 +88,8 @@ Having such redundancy is useful for human comprehension but not for computation
 
 ## October 30, 2025, Summary of Meeting
 
-- 
+- will need a meta language, a language to discuss the languages
+- we don't yet know where we will publish
 
 ## November 6, 2025, Summary of Meeting
 
