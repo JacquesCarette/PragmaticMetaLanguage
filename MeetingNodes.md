@@ -101,3 +101,14 @@ Having such redundancy is useful for human comprehension but not for computation
 - we discussed how over languages are used.  An over language is an intermediate language.  The over language could be the target of a generator, as in the case of Drasil code generating GOOL code.  For pandoc, the normal use case is for translation.  A sentence s1 in language L1 could be translated to a sentence s in the over language, and then that sentence could be translated to a new sentence s1 in language L2.  For panbench the language is intended to be used directly to write tests.
 - [rust](https://rust-lang.org/) is a typed, low-level language with ownership types.  JC mentioned that it can be considered as a modern replacement for C.
 - WF said that it would be relatively easy to build an over language for first-order logic - a family of syntax of first order logics
+
+## November 13, 2025, Summary of Meeting
+
+- we discussed ["S2Doc - Spatial-Semantic Document Format" by Kempf and Puppe (2025)](https://arxiv.org/pdf/2511.01113) because it relates to our "big picture" goal of a pragmatic meta language
+- in particular, we discussed Figure 1
+which shows 6 views of the same table: the table itself, the physical view, the logical view, the functional view, the semantic view and the ontological view.
+- HOMEWORK: review the two papers that are the inspiration for Kempf and Puppe (the third paper mentioned is the source of the example table):
+   - [Xinxin Wang, 1996. Tabular Abstraction, Editing and Formatting, PhD Thesis, University of Waterloo.](https://cs.uwaterloo.ca/research/tr/1996/09/CS-96-09.pdf)
+   - [Matthew Francis Hurst. 2000. The Interpretation of Tables in Texts. PhD Thesis, University of Edinburgh.](https://era.ed.ac.uk/handle/1842/7309)
+
+- the design of an over language starts with the set of under languages plus the things you want to say in the over language.  The goal is not to say everything the under languages to say; the focus is narrowed to the things in the domain of interest.  For instance, GOOL code does not capture everything that can be said in Java, Python, C++ and C#; it captures the parts that are needed for the domain of scientific software programs.
