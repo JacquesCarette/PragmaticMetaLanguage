@@ -112,3 +112,5 @@ which shows 6 views of the same table: the table itself, the physical view, the 
    - [Matthew Francis Hurst. 2000. The Interpretation of Tables in Texts. PhD Thesis, University of Edinburgh.](https://era.ed.ac.uk/handle/1842/7309)
 
 - the design of an over language starts with the set of under languages plus the things you want to say in the over language.  The goal is not to say everything the under languages to say; the focus is narrowed to the things in the domain of interest.  For instance, GOOL code does not capture everything that can be said in Java, Python, C++ and C#; it captures the parts that are needed for the domain of scientific software programs.
+- OCaml and Haskell look different because Ocaml doesn't have type classes.  However, the two language let you say more or less the same thing.
+- To determine what subset of the under languages should be covered by the over language we look at what we want to say in our domain
