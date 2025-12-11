@@ -114,3 +114,19 @@ which shows 6 views of the same table: the table itself, the physical view, the 
 - the design of an over language starts with the set of under languages plus the things you want to say in the over language.  The goal is not to say everything the under languages to say; the focus is narrowed to the things in the domain of interest.  For instance, GOOL code does not capture everything that can be said in Java, Python, C++ and C#; it captures the parts that are needed for the domain of scientific software programs.
 - OCaml and Haskell look different because Ocaml doesn't have type classes.  However, the two language let you say more or less the same thing.
 - To determine what subset of the under languages should be covered by the over language we look at what we want to say in our domain
+
+## November 29, 2025, Summary of Meeting
+
+- We discussed the two papers mentioned during the Nov 13 meeting (Wang, 1996 and Hurst 2000)
+- We aren't interested in Hurst's specific goal of extracting information from table in documents.  His goal is to extract contents from a given table in a document for a natural language processing system.  Our goal is to capture data and generate a tabular view of this data.  We "know" the information already.  The challenge is the right way to capture it and the right way to visualize it.
+- Horst's physical tables layer corresponds to the knowledge modelled by over languages like LaTeX, and html
+- we could view the data in a table in tabular form, or in some cases, we could plot this data in a graph.  These are different views of the same knowledge.
+- we can identify types of tables so that less low-level data is necessary.  For instance, Parnas tables have a variety of types (inverted table, normal table, decision table, vector table etc).  If we know the type of the table we only need to provide the data.  The visualization of the table is known, so we don't need the low level (physical level) details.
+- we discusssed psycholinguistics (psychology + linguistics) because people bring an intuitive understanding to tables.  (As an aside, Smith recently had a discussion with Istvan about a graph of the prerequisite relation between our courses.  Smith put the first year courses on the bottom of the graph, but Istvan said people read from the top down, so the first year courses should be at the top.)
+- Horst (2000) has a section on psycholinguistics.  In this section he introduces some other table types: list tables and matrix tables.
+- people bring an intuitive understanding to tables
+- we need at least two languages: 
+1) language that encapsulates data
+2) language of display
+- this is analogous to XML (data) and CSC (display)
+- we agreed that for our next meeting we would continue the discussion of Wang and Horst
