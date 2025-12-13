@@ -130,3 +130,9 @@ which shows 6 views of the same table: the table itself, the physical view, the 
 2) language of display
 - this is analogous to XML (data) and CSC (display)
 - we agreed that for our next meeting we would continue the discussion of Wang and Horst
+
+## December 11, 2025, Summary of Meeting
+
+- we had a brief conversation inspired from the Horst and Wang theses
+- in our approach the table is a means of representation; it is not the primary artifact
+- next week we plan to get back to discussing our plans for writing a paper
