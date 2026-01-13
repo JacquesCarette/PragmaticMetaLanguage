@@ -137,7 +137,7 @@ which shows 6 views of the same table: the table itself, the physical view, the 
 - in our approach the table is a means of representation; it is not the primary artifact
 - next week we plan to get back to discussing our plans for writing a paper
 
-## December 18, 2026
+## December 18, 2025
 
 - proposed paper structure:
    - examples
@@ -174,5 +174,10 @@ which shows 6 views of the same table: the table itself, the physical view, the 
    - we could try [Programming](https://programming-journal.org/) - joint journal and conference
    - International Joint Conference on Automated Reasoning [IJCAR](https://ijcar.org/)
 
+## Jan 13, 2026
+
+- short meeting with Smith and Carette
+- we discussed the possibility of spending future meetings where we are all concurrently working on the paper, rather than discussing
+- we agreed that Smith will send a summary of our last meeting over e-mail with the request to review and think before next week's meeting
 
    
