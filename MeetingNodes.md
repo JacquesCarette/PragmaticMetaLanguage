@@ -136,3 +136,43 @@ which shows 6 views of the same table: the table itself, the physical view, the 
 - we had a brief conversation inspired from the Horst and Wang theses
 - in our approach the table is a means of representation; it is not the primary artifact
 - next week we plan to get back to discussing our plans for writing a paper
+
+## December 18, 2026
+
+- proposed paper structure:
+   - examples
+      - example around logics (Bill)
+      - GOOL (Spencer)
+      - pandoc (Jacques)
+      - panbench (Jacques)
+   - synthesis
+   - principles
+
+- [TPTP](https://tptp.org/UserDocs/TPTPLanguage/TPTPLanguage.shtml) - single format for first order logic
+
+- [ACL2](https://en.wikipedia.org/wiki/ACL2) 
+   - in the related literature we can discuss this language
+   - many things can be translated into this language (not necessarily easy to read)
+   - a language that expresses the meaning of other things - it is horrible for syntax
+   - good language for machines, not for people - too verbose for people
+
+- we discussed internal and external languages - over languages are eternal
+
+- useful to create an overlanguage when we have a domain over which we want to say many things - there are many languages that can say what we want to say, but we don't want to choose
+- there are many reasons to not choose 
+- flexibility of choice is not needed when an ecosystem with one language does everything you need in a syntax that is fit for the purpose
+
+- an interface language allows going from language A to B via the interface language - this is what pandoc does, and what LLVM does
+- an interface language doesn't have to be something that humans look at
+
+- our overlanguage concept includes interfaces, but is not limited to this use case
+
+- pandoc doesn't really have a surface language {I assume we are using surface language to mean user-facing language.}
+
+- where to publish?
+   - we want people from many areas to look at the paper
+   - we could try [Programming](https://programming-journal.org/) - joint journal and conference
+   - International Joint Conference on Automated Reasoning [IJCAR](https://ijcar.org/)
+
+
+   
