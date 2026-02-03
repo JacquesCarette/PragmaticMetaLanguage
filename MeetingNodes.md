@@ -180,4 +180,10 @@ which shows 6 views of the same table: the table itself, the physical view, the 
 - we discussed the possibility of spending future meetings where we are all concurrently working on the paper, rather than discussing
 - we agreed that Smith will send a summary of our last meeting over e-mail with the request to review and think before next week's meeting
 
-   
+## Feb 3, 2026
+
+- JC will send us a paper about work to translate between "FORTRAN 77 + home grown extensions" to FORTRAN 2008.  Although done in an ad hoc way, this may be an example of an over language
+- We are going to focus on our examples and doing some writing
+- The draft document will be written in LaTeX and live in this repo
+- WF will look at [TPTP](https://tptp.org/UserDocs/TPTPLanguage/TPTPLanguage.shtml) to see if it is a good example of an over language for logic
+
