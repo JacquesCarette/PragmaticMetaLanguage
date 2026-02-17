@@ -1,0 +1,239 @@
+%% For double-blind review submission, w/o CCS and ACM Reference (max submission space)
+\documentclass[sigplan,screen,10pt]{acmart}
+\settopmatter{printfolios=true}
+%% For double-blind review submission, w/ CCS and ACM Reference
+%\documentclass[sigplan,review,anonymous]{acmart}\settopmatter{printfolios=true}
+%% For single-blind review submission, w/o CCS and ACM Reference (max submission space)
+%\documentclass[sigplan,review]{acmart}\settopmatter{printfolios=true,printccs=false,printacmref=false}
+%% For single-blind review submission, w/ CCS and ACM Reference
+%\documentclass[sigplan,review]{acmart}\settopmatter{printfolios=true}
+%% For final camera-ready submission, w/ required CCS and ACM Reference
+%\documentclass[sigplan]{acmart}\settopmatter{}
+
+
+%% Copyright information
+%% Supplied to authors (based on authors' rights management selection;
+%% see authors.acm.org) by publisher for camera-ready submission;
+%% use 'none' for review submission.
+%%% The following is specific to PEPM '20 and the paper
+%%% 'GOOL: A Generic Object-Oriented Language'
+%%% by Jacques Carette, Brooks MacLachlan, and Spencer Smith.
+%%%
+\setcopyright{acmlicensed}
+\acmPrice{15.00}
+\acmDOI{10.1145}
+\acmYear{2026}
+\copyrightyear{2026}
+\acmISBN{978-...}
+\acmConference[ShortTitle]{Proceedings of ...}{Date}{Location}
+\acmBooktitle{Proceedings of ...}
+
+%% Bibliography style
+\bibliographystyle{ACM-Reference-Format}
+%% Citation style
+%\citestyle{acmauthoryear}  %% For author/year citations
+%\citestyle{acmnumeric}     %% For numeric citations
+%\setcitestyle{nosort}      %% With 'acmnumeric', to disable automatic
+                            %% sorting of references within a single citation;
+                            %% e.g., \cite{Smith99,Carpenter05,Baker12}
+                            %% rendered as [14,5,2] rather than [2,5,14].
+%\setcitesyle{nocompress}   %% With 'acmnumeric', to disable automatic
+                            %% compression of sequential references within a
+                            %% single citation;
+                            %% e.g., \cite{Baker12,Baker14,Baker16}
+                            %% rendered as [2,3,4] rather than [2-4].
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Note: Authors migrating a paper from traditional SIGPLAN
+%% proceedings format to PACMPL format must update the
+%% '\documentclass' and topmatter commands above; see
+%% 'acmart-pacmpl-template.tex'.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% Some recommended packages.
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+
+\usepackage{booktabs}   %% For formal tables:
+                        %% http://ctan.org/pkg/booktabs
+\usepackage{subcaption} %% For complex figures with subfigures/subcaptions
+                        %% http://ctan.org/pkg/subcaption
+\usepackage{listings}
+\lstset{columns=flexible}
+
+\usepackage{xargs}                      % Use more than one optional parameter 
+%in a new commands
+\usepackage{pgfplots}
+\pgfplotsset{width=9cm,height=6cm,compat=1.8}
+
+\usepackage{balance}
+%
+% \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+
+% for nice TODO notes
+% \newcommandx{\unsure}[2][1=]{\todo[inline,linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+% \newcommandx{\change}[2][1=]{\todo[inline,linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+% \newcommandx{\info}[2][1=]{\todo[inline,linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+% \newcommandx{\improvement}[2][1=]{\todo[inline,linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+
+%%%%%%%%%%%%%%%%%%%%%
+%% Useful abbreviations
+\newcommand{\Csharp}{C\#}
+\newcommand{\Cplusplus}{C\texttt{++}}
+
+\newcommand{\abbrev}[1]{\textbf{#1}}
+\newcommand{\mainstream}{\abbrev{mainstream}}
+\newcommand{\readable}{\abbrev{readable}}
+\newcommand{\idiomatic}{\abbrev{idiomatic}}
+\newcommand{\documented}{\abbrev{documented}}
+\newcommand{\oopatterns}{\abbrev{patterns}}
+\newcommand{\common}{\abbrev{common}}
+\newcommand{\expressivity}{\abbrev{expressivity}}
+
+\pagenumbering{gobble}
+
+\begin{document}
+
+%% Title information
+\title{Designing Syntactic Over Languages}         %% [Short %%Title] is optional;
+                                        %% when present, will be used in
+%                                        %% header instead of Full Title.
+%\titlenote{with title note}             %% \titlenote is optional;
+%                                        %% can be repeated if necessary;
+%                                        %% contents suppressed with 'anonymous'
+%\subtitle{(Short Paper)}                     %% \subtitle is optional
+%\subtitlenote{with subtitle note}       %% \subtitlenote is optional;
+%                                        %% can be repeated if necessary;
+%                                        %% contents suppressed with 'anonymous'
+
+
+%% Author information
+%% Contents and number of authors suppressed with 'anonymous'.
+%% Each author should be introduced by \author, followed by
+%% \authornote (optional), \orcid (optional), \affiliation, and
+%% \email.
+%% An author may have multiple affiliations and/or emails; repeat the
+%% appropriate command.
+%% Many elements are not rendered, but should be provided for metadata
+%% extraction tools.
+
+%% Author with single affiliation.
+%\orcid{nnnn-nnnn-nnnn-nnnn}             %% \orcid is optional
+\author{Jacques Carette}
+\orcid{0000-0001-8993-9804}
+\affiliation{
+%  \position{Position1}
+  \department{Department of Computing and Software}              %%
+  %%\department is recommended
+  \institution{McMaster University}            %% \institution is required
+  \streetaddress{1280 Main Street West}
+  \city{Hamilton}
+  \state{Ontario}
+  \postcode{L8S 4L8}
+  \country{Canada}                    %% \country is recommended
+}
+\email{carette@mcmaster.ca}          %% \email is recommended
+
+\author{William Farmer}
+%\authornote{with author1 note}          %% \authornote is optional;
+                                        %% can be repeated if necessary
+\affiliation{
+  \department{Department of Computing and Software}              %% \department
+  \institution{McMaster University}            %% \institution is required
+  \streetaddress{1280 Main Street West}
+  \city{Hamilton}
+  \state{Ontario}
+  \postcode{L8S 4L8}
+  \country{Canada}                    %% \country is recommended
+}
+\email{wmfarmer@mcmaster.ca}          %% \email is recommended
+
+\author{Spencer Smith}
+%\authornote{with author1 note}          %% \authornote is optional;
+%% can be repeated if necessary
+\orcid{0000-0002-0760-0987}
+\affiliation{
+  \department{Department of Computing and Software}              %%
+  \institution{McMaster University}            %% \institution is required
+  \streetaddress{1280 Main Street West}
+  \city{Hamilton}
+  \state{Ontario}
+  \postcode{L8S 4L8}
+  \country{Canada}                    %% \country is recommended
+}
+\email{smiths@mcmaster.ca}          %% \email is recommended
+
+
+%% Abstract
+%% Note: \begin{abstract}...\end{abstract} environment must come
+%% before \maketitle command
+\begin{abstract}
+  Abstract goes here.
+\end{abstract}
+
+
+%% 2012 ACM Computing Classification System (CSS) concepts
+%% Generate at 'http://dl.acm.org/ccs/ccs.cfm'.
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10011007.10011006.10011041.10011047</concept_id>
+<concept_desc>Software and its engineering~Source code generation</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10011007.10010940.10010971.10011682</concept_id>
+<concept_desc>Software and its engineering~Abstraction, modeling and modularity</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10011007.10011006.10011008.10011009.10011011</concept_id>
+<concept_desc>Software and its engineering~Object oriented languages</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Software and its engineering~Source code generation}
+\ccsdesc[300]{Software and its engineering~Abstraction, modeling and modularity}
+%% End of generated code
+
+
+%% Keywords
+%% comma separated list
+\keywords{Code Generation, Domain Specific Language, Haskell, Documentation}
+
+\maketitle
+
+\section{Introduction}
+
+\section{Examples}
+
+\subsection{Logic Languages}
+
+\subsection{GOOL}
+
+\subsection{Pandoc}
+
+\subsection{Panbench}
+
+\section{Synthesis}
+
+\section{Principles}
+
+\section{Concluding Remarks}
+
+\balance
+\bibliography{References}
+
+%% Appendix
+% \appendix
+% \section{Appendix}
+% 
+% Text of appendix \ldots
+% 
+\end{document}
