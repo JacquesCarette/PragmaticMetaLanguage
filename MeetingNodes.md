@@ -187,3 +187,13 @@ which shows 6 views of the same table: the table itself, the physical view, the 
 - The draft document will be written in LaTeX and live in this repo
 - WF will look at [TPTP](https://tptp.org/UserDocs/TPTPLanguage/TPTPLanguage.shtml) to see if it is a good example of an over language for logic
 
+## Feb 24, 2026
+
+- Discussion 1: Should an over language be sparse?
+- That is, should we aim for theoretical expressivity, or practical expressivity.  For theoretical expressivity, the over language aims to have as few primitives as possible.  More complex concepts need to be built using combinations of the small set of primitives.  For practical expressivity, the number of primitives is determined by the needs of the under languages.  If it helps make the over language more natural for expressing ideas in the under language, then the primitive is included.  Practical expressivity does not include primitives that do not serve any purpose.
+- We agreed that sparsity is not the goal of the over language.  We agreed on the value of practical expressivity.
+- BF provided an argument in favour of practical expressivity from propositional logic. If the goal for an over language for propositional logic is theoretical expressivity, then only one or two operators are needed. All of the usual connectives ($\neg, \land, \lor, \rightarrow, 
+\leftrightarrow$) and be expressed by a single operator.  That single operator can be either NAND ($\uparrow$) or NOR ($\downarrow$). Other possible base operator sets include $\{ \neg, \land \}$, $\{ \neg, \lor \}$ and $\{ \neg, \rightarrow \}$.
+- Theoretical expressivity would mean rewriting DeMorgan's law from the familiar form $$\neg (P \lor Q) \equiv (\neg P \land \neg Q)$$ to (using $\{ \neg, \land \}$ only) $$\neg \neg (\neg P \land \neg Q) \equiv (\neg P \land \neg Q)$$ (generated using ChatGPT).  Although equivalent statements, the first form is recognizable as DeMorgan's law, the second form is not.  Having more operators is the practical way to proceed for an over language, especially if the language is intended to be read by humans.
+- BF and JC linked this to their work on [Realms](https://www.researchgate.net/publication/262604257_Realms_A_Structure_for_Consolidating_Knowledge_about_Mathematical_Theories)
+
