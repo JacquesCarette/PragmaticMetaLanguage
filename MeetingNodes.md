@@ -195,5 +195,28 @@ which shows 6 views of the same table: the table itself, the physical view, the 
 - BF provided an argument in favour of practical expressivity from propositional logic. If the goal for an over language for propositional logic is theoretical expressivity, then only one or two operators are needed. All of the usual connectives ($\neg, \land, \lor, \rightarrow, 
 \leftrightarrow$) and be expressed by a single operator.  That single operator can be either NAND ($\uparrow$) or NOR ($\downarrow$). Other possible base operator sets include $\{ \neg, \land \}$, $\{ \neg, \lor \}$ and $\{ \neg, \rightarrow \}$.
 - Theoretical expressivity would mean rewriting DeMorgan's law from the familiar form $$\neg (P \lor Q) \equiv (\neg P \land \neg Q)$$ to (using $\{ \neg, \land \}$ only) $$\neg \neg (\neg P \land \neg Q) \equiv (\neg P \land \neg Q)$$ (generated using ChatGPT).  Although equivalent statements, the first form is recognizable as DeMorgan's law, the second form is not.  Having more operators is the practical way to proceed for an over language, especially if the language is intended to be read by humans.
-- BF and JC linked this to their work on [Realms](https://www.researchgate.net/publication/262604257_Realms_A_Structure_for_Consolidating_Knowledge_about_Mathematical_Theories)
 
+- BF and JC linked this to their work on [Realms](https://www.researchgate.net/publication/262604257_Realms_A_Structure_for_Consolidating_Knowledge_about_Mathematical_Theories)
+- an over language is like a Face to a Realm.  A Realm is one theory with many guises.  A Face doesn't care what is a primitive and what is a definitional extension.
+
+- Discussion 2: where to stop with adding symbols to a Face (over language)?  The goal is to make it easy to say the things that are natural to say in the under languages.  However, symbols should not just be added because they are there.  For instance, for propositional logic there are 16 operators, but a reasonable over language would only include the usual ones.
+- JC mentioned the [Fairbairn threshold](https://wiki.haskell.org/Fairbairn_threshold) from functional programming 
+
+- Conclusions from discussion
+   - An over language should have a rich interface
+   - An over language is most useful for languages that allow adding definitions
+- Definitions can be used in the under language so that ideas can be expressed and still look like themselves (see the DeMorgan's example above)
+- In some cases, we accept that the expansion in the under language will no longer "look like itself" as expressed in the over language.  For instance, design patterns in GOOL are expanded in the under languages, but the design pattern is no longer obvious in the generated code.
+
+- Discussion 3: extending the example to predicate logic
+   - We don't need all binders theoretically, but for practical purposes we should use all binders that are needed to express the ideas that appear in the under languages
+   - Classical and constructive logics should have different over languages
+   - n-ary operators are needed in an over language for logic
+
+- we also discussed implicit binders
+
+# Mar 24, 2026
+
+- we discussed modelling of problem domain knowledge with a recent [informal talk by SS](https://github.com/JacquesCarette/Drasil/blob/main/Presentations/GenSSS_KTHTalk2026/GenSSS_KTHTalk2026.pdf) as the starting point
+- the starting point for the discussion was the apparent limitations of validity frames in the modelling of cyber physical systems (CPS).  CPS tracks the validity (appropriateness) of a model based on whether the sensor/input values are within the range that is valid for the model.
+- it seems that the CPS notion of validity frames does not highlight the assumptions that were made, or the scope decisions that impose what knowledge is in the universe, and what is outside of it
