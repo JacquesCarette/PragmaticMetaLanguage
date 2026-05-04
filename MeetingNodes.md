@@ -220,3 +220,23 @@ which shows 6 views of the same table: the table itself, the physical view, the 
 - we discussed modelling of problem domain knowledge with a recent [informal talk by SS](https://github.com/JacquesCarette/Drasil/blob/main/Presentations/GenSSS_KTHTalk2026/GenSSS_KTHTalk2026.pdf) as the starting point
 - the starting point for the discussion was the apparent limitations of validity frames in the modelling of cyber physical systems (CPS).  CPS tracks the validity (appropriateness) of a model based on whether the sensor/input values are within the range that is valid for the model.
 - it seems that the CPS notion of validity frames does not highlight the assumptions that were made, or the scope decisions that impose what knowledge is in the universe, and what is outside of it
+
+# Apr 28, 2026
+
+The paper is structured to answer the following questions:
+
+1. What is the concept of an over language?
+2. Why is it important?
+3. Which ones already exist?
+4. What are the principles/guidelines for creating a new overlanguage?
+
+- To help us define what an overlanguage is, we can give examples of what it isn't, such as:
+  - [Racket](https://racket-lang.org/) is not an overlanguage.  It is a meta language that lets you define languages.
+  - [Dedukti](https://deducteam.github.io/) is not an overlanguage; it is a meta language
+  - [TPTP](https://tptp.org/UserDocs/TPTPLanguage/TPTPLanguage.shtml) is not an over language
+
+- [logical frameworks](https://en.wikipedia.org/wiki/Logical_framework) are not overlanguages, they are meta languages
+
+- BF mentioned that an overlanguage for LISP could get rid of parentheses
+- [autosubst](https://www.ps.uni-saarland.de/autosubst/) is a tool used within a logical framework
+
